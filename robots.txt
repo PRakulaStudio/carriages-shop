@@ -1,0 +1,11 @@
+User-Agent: *
+Disallow: /page3083392.html
+Disallow: /page3083407.html
+Disallow: /tilda/form*
+Disallow: /tilda/rec*
+Disallow: /tilda/click*
+Disallow: /tilda/scroll*
+Disallow: /tilda/popup*
+Disallow:
+Sitemap: http://aimile-magazin.ru/sitemap.xml
+Host: aimile-magazin.ru
