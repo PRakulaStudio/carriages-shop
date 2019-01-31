@@ -1170,7 +1170,7 @@ $(document).ready(function() {
 	<form action="https://maker.ifttt.com/trigger/CarriagesShop/with/key/c5hnJBCU0t-5kufqIvcbrnDsxLu-YY9jYHdjKk1BiJ3"
 	      method="get"
 	      onsubmit='return fetch(action+`?`+new URLSearchParams(new FormData(this)).toString()+
-	      (document.querySelector(`.t762__title`)?`<br>Товар: <a href="${location.href}">${document.querySelector(`.t762__title`).innerText}</a>`:``),
+	      (document.querySelector(`.t762__title`)?`<br>Товар: <a href="${location.origin+location.pathname}">${document.querySelector(`.t762__title`).innerText}</a>`:``),
 	      {mode:"no-cors"}).then(response=>document.querySelector(`#order-from form`).innerHTML=
 	      `<span class="title">Спасибо!</span><br><span>Мы скоро с вами свяжемся!</span><a class="close-order-form" href="#">✕</a>`) && false'>
 		<span class="title">Оформить заказ</span>
