@@ -1632,4 +1632,24 @@ $(document).ready(function() {
 	</form>
 </div>
 </body>
+<!-- WhatsHelp.io widget -->
+<script type="text/javascript">
+    (function () {
+        var options = {
+            whatsapp: "+79379320753", // WhatsApp number
+            telegram: "+79379320753", // Telegram bot username
+            company_logo_url: "//static.whatshelp.io/img/flag.png", // URL of company logo (png, jpg, gif)
+            greeting_message: "Здравствуйте!Хотите поторговаться? Мы тут и готовы Вам помочь!", // Text of greeting message
+            call_to_action: "Начнем торг?", // Call to action
+            button_color: "#FF6550", // Color of button
+            position: "left", // Position may be 'right' or 'left'
+            order: "whatsapp,telegram", // Order of buttons
+        };
+        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+<!-- /WhatsHelp.io widget -->
 </html>
