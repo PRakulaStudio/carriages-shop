@@ -8,4 +8,4 @@ Disallow: /tilda/scroll*
 Disallow: /tilda/popup*
 Disallow:
 Sitemap: https://carriages-shop.prakula.ru/sitemap.xml
-Host: aimile-magazin.ru
+Host: HAPPY LAND
