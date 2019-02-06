@@ -1,0 +1,15 @@
+Index: oley-501-pink.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- oley-501-pink.html	(revision 1550f29e670fb2ccaa3daa4308bec00b650947d2)
++++ oley-501-pink.html	(date 1549486349414)
+@@ -1587,6 +1587,38 @@
+ 		<a class="close-order-form" href="#">✕</a>
+ 	</form>
+ </div>
++
+ <script src="//cdn.callibri.ru/callibri.js" type="text/javascript" charset="utf-8"></script>
+ </body>
+ </html>
