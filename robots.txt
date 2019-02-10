@@ -7,5 +7,5 @@ Disallow: /tilda/click*
 Disallow: /tilda/scroll*
 Disallow: /tilda/popup*
 Disallow:
-Sitemap: https://carriages-shop.prakula.ru/sitemap.xml
-Host: HAPPY LAND
+Sitemap: http://aimile-magazin.ru/sitemap.xml
+Host: aimile-magazin.ru
