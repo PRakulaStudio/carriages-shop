@@ -1603,7 +1603,7 @@
 }
 
 .yashare-style-white-black .b-share-icon {
-    background-image: url("../../static.tildacdn.com/img/b-share_counter_large_white.png") !important;
+    background-image: url("static.tildacdn.com/img/b-share_counter_large_white.png") !important;
 }
 
 .yashare-style-transp-black .b-share-btn__wrap {
@@ -1611,7 +1611,7 @@
 }
 
 .yashare-style-transp-black .b-share-icon {
-    background-image: url("../../static.tildacdn.com/img/b-share_counter_large_white.png") !important;
+    background-image: url("static.tildacdn.com/img/b-share_counter_large_white.png") !important;
 }
 
 .yashare-style-transp-black .b-share-counter {
@@ -1722,7 +1722,7 @@
     left: 20%;
     height: 34px;
     width: 21px;
-    background: url("../../static.tildacdn.com/img/aboutSliderControls.png") no-repeat;
+    background: url("static.tildacdn.com/img/aboutSliderControls.png") no-repeat;
 }
 
 .carousel-control .carousel-control-left-white {
@@ -1733,7 +1733,7 @@
     left: 20%;
     height: 34px;
     width: 21px;
-    background: url("../../static.tildacdn.com/img/aboutSliderControls_white.png") no-repeat;
+    background: url("static.tildacdn.com/img/aboutSliderControls_white.png") no-repeat;
 }
 
 .carousel-control .carousel-control-right {
@@ -1744,7 +1744,7 @@
     right: 20%;
     height: 34px;
     width: 21px;
-    background: url("../../static.tildacdn.com/img/aboutSliderControls.png") no-repeat;
+    background: url("static.tildacdn.com/img/aboutSliderControls.png") no-repeat;
     background-position: left bottom;
 }
 
@@ -1756,7 +1756,7 @@
     right: 20%;
     height: 34px;
     width: 21px;
-    background: url("../../static.tildacdn.com/img/aboutSliderControls_white.png") no-repeat;
+    background: url("static.tildacdn.com/img/aboutSliderControls_white.png") no-repeat;
     background-position: left bottom;
 }
 
