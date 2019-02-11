@@ -6,3 +6,11 @@ body {
     top: unset !important;
     bottom: 0 !important;
 }
+
+#recorddiv81191048.t-cover {
+    height: 528px !important;
+}
+
+.t-cover__carrier, .t-cover__filter {
+    height: 100% !important;
+}
