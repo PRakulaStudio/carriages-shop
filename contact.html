@@ -1516,18 +1516,29 @@
 				}
 			</style>
 			<form action="https://maker.ifttt.com/trigger/CarriagesShop/with/key/c5hnJBCU0t-5kufqIvcbrnDsxLu-YY9jYHdjKk1BiJ3"
-				  method="get"
-				  onsubmit='return fetch(action+`?`+new URLSearchParams(new FormData(this)).toString()+
-	      (document.querySelector(`.t762__title`)?`<br>Товар: <a href="${location.origin+location.pathname}">${document.querySelector(`.t762__title`).innerText}</a>`:``),
-	      {mode:"no-cors"}).then(response=>document.querySelector(`#order-from form`).innerHTML=
-	      `<span class="title">Спасибо!</span><br><span>Мы скоро с вами свяжемся!</span><a class="close-order-form" href="#">✕</a>`) && false'>
+				  method="get">
 				<span class="title">Оформить заказ</span>
 				<input name="value1" placeholder="Имя">
 				<input name="value2" placeholder="Телефон" type="tel">
 				<input name="value3" placeholder="Почта" type="email">
 				<button type="submit">Заказать</button>
 				<a class="close-order-form" href="#">✕</a>
-	</form>
+			</form>
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+					document.querySelector('#order-from form').addEventListener('submit', function (event) {
+						event.preventDefault();
+						var productData = document.querySelector(`.t762__title`) ?
+								`<br>Товар: <a href="${location.origin + location.pathname}">${document.querySelector(`.t762__title`).innerText}</a>` : ``;
+						fetch(this.action + `?` + new URLSearchParams(new FormData(this)).toString() + productData, {mode: "no-cors"})
+								.then(function () {
+									document.querySelector(`#order-from form`).innerHTML =
+											`<span class="title">Спасибо!</span><br><span>Мы скоро с вами свяжемся!</span><a class="close-order-form" href="#">✕</a>`
+								});
+						ym(52198201, "reachGoal", "order-send");
+					});
+				})
+			</script>
 </div>
 <!-- WhatsHelp.io widget -->
 <script type="text/javascript">

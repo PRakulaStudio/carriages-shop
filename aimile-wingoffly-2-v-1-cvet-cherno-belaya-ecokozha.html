@@ -130,10 +130,13 @@
                     <div class="t228__rightcontainer">
                         <div class="t228__right_descr" style="color:#000000;">
                             <div data-customstyle="yes" style="font-size:18px;text-align:left;color:#999999;"><span
-                                    style="color: rgb(0, 0, 0);"><strong><a data-redactor-tag="a" href="#popup:myform"
-                                                                            style="border-bottom-color: rgb(0, 0, 0); color: rgb(153, 153, 153);"><span
-                                    style="color: rgb(0, 0, 0);"><span data-redactor-style="font-weight: 500;"
-                                                                       class="calibri_phone" style="font-weight: 500;">+7 (965) 119 92 23</span></span></a></strong></span><br/>
+                                    style="color: rgb(0, 0, 0);"><strong><span data-redactor-tag="a"
+                                                                               style="border-bottom-color: rgb(0, 0, 0); color: rgb(153, 153, 153);"><span
+                                    style="color: rgb(0, 0, 0);"><a class="calibri_phone"
+                                                                    data-redactor-style="font-weight: 500;"
+                                                                    href="tel:+7(965)1199223"
+                                                                    onclick="ym(52198201, 'reachGoal', 'call'); return true;"
+                                                                    style="font-weight: 500;">+7 (965) 119 92 23</a></span></span></strong></span><br/>
                                 <span style="font-size: 14px;"><span data-redactor-style="color: rgb(0, 0, 0);"
                                                                      style="color: rgb(0, 0, 0);">( Whatsapp / Viber )</span></span>
                                 <div data-customstyle="yes" style="font-size:18px;"></div>
@@ -320,10 +323,13 @@
                         </div>
                         <div class="t282__descr t-descr t-descr__xxs" style="color:#000000;">
                             <div data-customstyle="yes" style="font-size:18px;text-align:center;color:#999999;"><span
-                                    style="color: rgb(0, 0, 0);"><strong><a data-redactor-tag="a" href="#popup:myform"
-                                                                            style="border-bottom-color: rgb(0, 0, 0); color: rgb(153, 153, 153);"><span
-                                    style="color: rgb(0, 0, 0);"><span data-redactor-style="font-weight: 500;"
-                                                                       class="calibri_phone" style="font-weight: 500;">+7 (965) 119 92 23</span></span></a></strong></span><br/>
+                                    style="color: rgb(0, 0, 0);"><strong><span data-redactor-tag="a"
+                                                                               style="border-bottom-color: rgb(0, 0, 0); color: rgb(153, 153, 153);"><span
+                                    style="color: rgb(0, 0, 0);"><a class="calibri_phone"
+                                                                    data-redactor-style="font-weight: 500;"
+                                                                    href="tel:+7(965)1199223"
+                                                                    onclick="ym(52198201, 'reachGoal', 'call'); return true;"
+                                                                    style="font-weight: 500;">+7 (965) 119 92 23</a></span></span></strong></span><br/>
                                 <span style="font-size: 14px;"><span data-redactor-style="color: rgb(0, 0, 0);"
                                                                      style="color: rgb(0, 0, 0);">( Whatsapp / Viber )</span></span>
                                 <div data-customstyle="yes" style="font-size:18px;"></div>
@@ -1194,7 +1200,9 @@ $(document).ready(function(){
                 <div class="t-section__title t-title t-title_xs" field="btitle">Контакты</div>
                 <div class="t-section__descr t-descr t-descr_xl t-margin_auto" field="bdescr">
                     <div data-customstyle="yes" style="font-size:22px;"><strong></strong><strong><a
-                            class="calibri_phone2" href="tel:+7(965)1199223">Тел: +7(965) 119 92 23</a></strong><br/>(
+                            class="calibri_phone2" href="tel:+7(965)1199223"
+                            onclick="ym(52198201, 'reachGoal', 'call'); return true;">Тел: +7(965) 119 92
+                        23</a></strong><br/>(
                         Whatsapp / Viber )<br/><strong><br/>Офис отдела
                         продаж:</strong><br/>109383 г. Москва Шоссейная 1 а.<br/><strong><br/>Реквизиты
                         продавца:</strong><br/>ИНН 057001432826;<br/>ОГРН: 318057100078480
@@ -1856,11 +1864,7 @@ $(document).ready(function() {
             }
         </style>
         <form action="https://maker.ifttt.com/trigger/CarriagesShop/with/key/c5hnJBCU0t-5kufqIvcbrnDsxLu-YY9jYHdjKk1BiJ3"
-              method="get"
-              onsubmit='return fetch(action+`?`+new URLSearchParams(new FormData(this)).toString()+
-	      (document.querySelector(`.t762__title`)?`<br>Товар: <a href="${location.origin+location.pathname}">${document.querySelector(`.t762__title`).innerText}</a>`:``),
-	      {mode:"no-cors"}).then(response=>document.querySelector(`#order-from form`).innerHTML=
-	      `<span class="title">Спасибо!</span><br><span>Мы скоро с вами свяжемся!</span><a class="close-order-form" href="#">✕</a>`) && false'>
+              method="get">
             <span class="title">Оформить заказ</span>
             <input name="value1" placeholder="Имя">
             <input name="value2" placeholder="Телефон" type="tel">
@@ -1868,6 +1872,21 @@ $(document).ready(function() {
             <button type="submit">Заказать</button>
             <a class="close-order-form" href="#">✕</a>
         </form>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.querySelector('#order-from form').addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    var productData = document.querySelector(`.t762__title`) ?
+                        `<br>Товар: <a href="${location.origin + location.pathname}">${document.querySelector(`.t762__title`).innerText}</a>` : ``;
+                    fetch(this.action + `?` + new URLSearchParams(new FormData(this)).toString() + productData, {mode: "no-cors"})
+                        .then(function () {
+                            document.querySelector(`#order-from form`).innerHTML =
+                                `<span class="title">Спасибо!</span><br><span>Мы скоро с вами свяжемся!</span><a class="close-order-form" href="#">✕</a>`
+                        });
+                    ym(52198201, "reachGoal", "order-send");
+                });
+            })
+        </script>
     </div>
 
     <!-- Marquiz script start -->
