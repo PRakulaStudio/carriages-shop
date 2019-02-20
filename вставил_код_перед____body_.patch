@@ -11,5 +11,14 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
  </div>
 +
  <script src="//cdn.callibri.ru/callibri.js" type="text/javascript" charset="utf-8"></script>
- </body>
+ <<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-103141253-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-103141253-2');
+</script>
+</body>>
  </html>
