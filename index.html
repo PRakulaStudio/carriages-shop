@@ -3296,18 +3296,16 @@
         <a class="close-order-form" href="#">✕</a>
     </form>
     <script>
-        document.addEventListener('load', function (event) {
-            document.querySelector('#order-from form').addEventListener('submit', function () {
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector('#order-from form').addEventListener('submit', function (event) {
                 event.preventDefault();
                 var productData = document.querySelector(`.t762__title`) ?
                     `<br>Товар: <a href="${location.origin + location.pathname}">${document.querySelector(`.t762__title`).innerText}</a>` : ``;
-
-                fetch(action + `?` + new URLSearchParams(new FormData(this)).toString() + productData, {mode: "no-cors"})
+                fetch(this.action + `?` + new URLSearchParams(new FormData(this)).toString() + productData, {mode: "no-cors"})
                     .then(function () {
                         document.querySelector(`#order-from form`).innerHTML =
                             `<span class="title">Спасибо!</span><br><span>Мы скоро с вами свяжемся!</span><a class="close-order-form" href="#">✕</a>`
                     });
-
                 ym(52198201, "reachGoal", "order-send");
             });
         })
