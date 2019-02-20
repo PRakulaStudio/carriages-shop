@@ -2391,7 +2391,9 @@
                             <div class="t-section__title t-title t-title_xs" field="btitle">Контакты</div>
                             <div class="t-section__descr t-descr t-descr_xl t-margin_auto" field="bdescr">
                                 <div data-customstyle="yes" style="font-size:22px;"><strong></strong><strong>
-                                    <a class="calibri_phone2" href="tel:+7(965)1199223">Тел: +7(965) 119 92 23</a>
+                                    <a class="calibri_phone2" href="tel:+7(965)1199223"
+                                       onclick="ym(52198201, 'reachGoal', 'call'); return true;">Тел: +7(965) 119 92
+                                        23</a>
                                 </strong><br/>( Whatsapp / Viber )<br/><strong><br/>
                                     Офис отдела продаж:</strong><br/>
                                     109383 г. Москва Шоссейная 1 а.<br/><strong><br/>
@@ -3288,7 +3290,7 @@
           onsubmit='return fetch(action+`?`+new URLSearchParams(new FormData(this)).toString()+
 	      (document.querySelector(`.t762__title`)?`<br>Товар: <a href="${location.origin+location.pathname}">${document.querySelector(`.t762__title`).innerText}</a>`:``),
 	      {mode:"no-cors"}).then(response=>document.querySelector(`#order-from form`).innerHTML=
-	      `<span class="title">Спасибо!</span><br><span>Мы скоро с вами свяжемся!</span><a class="close-order-form" href="#">✕</a>`) && false'>
+	      `<span class="title">Спасибо!</span><br><span>Мы скоро с вами свяжемся!</span><a class="close-order-form" href="#">✕</a>`) && ym(52198201, "reachGoal", "order-send") && false'>
         <span class="title">Оформить заказ</span>
         <input name="value1" placeholder="Имя">
         <input name="value2" placeholder="Телефон" type="tel">
