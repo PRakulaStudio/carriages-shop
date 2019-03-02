@@ -14,3 +14,23 @@ body {
 .t-cover__carrier, .t-cover__filter {
     height: 100% !important;
 }
+
+.t786__price-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show-details-button {
+    font-family: 'CirceRounded', Arial, sans-serif;
+    order: 2;
+    display: inline-block;
+    background-color: #ff9900;
+    color: black;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 18px;
+    line-height: 20px;
+}
